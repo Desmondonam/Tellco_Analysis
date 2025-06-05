@@ -7,7 +7,7 @@ from sklearn.preprocessing import Normalizer, MinMaxScaler
 from sklearn.cluster import KMeans
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from pages import user_engagement
+
 
 # Configure the page
 st.set_page_config(
