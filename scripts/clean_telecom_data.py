@@ -30,6 +30,9 @@ class CleanTelecomData:
         return df
 
     def drop_columns_with_null_values(self, df: pd.DataFrame, threshold_in_percent=30) -> pd.DataFrame:
+        '''
+        Drop the columns that have more than 30% of missing values from the dataFrame
+        '''
         Helper = TelecomHelper()
 
         null_percent_df = pd.DataFrame(columns=['column', 'null_percent'])
@@ -63,6 +66,10 @@ class CleanTelecomData:
         return df
 
     def handle_missing_qantitative_data_with_mean(self, df: pd.DataFrame, method="mean"):
+        '''
+        Handle the missing values by imputing the missing values for the numerical data with 
+        mean
+        '''
 
         numeric_data = ['int16', 'int32', 'int64',
                         'float16', 'float32', 'float64']
